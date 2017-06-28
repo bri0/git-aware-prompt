@@ -21,26 +21,15 @@ If you `cd` to a Git working directory, you will see the current Git branch
 name displayed in your terminal prompt. When you're not in a Git working
 directory, your prompt works like normal.
 
-![Git Branch in Prompt](https://raw.github.com/jimeh/git-aware-prompt/master/preview.png)
+You can also use `tab` to autocomplete your branch names
 
 
 ## Installation
 
-Clone the project to a `.bash` folder in your home directory:
-
-```bash
-mkdir ~/.bash
-cd ~/.bash
-git clone git://github.com/jimeh/git-aware-prompt.git
+Simply
 ```
-
-Edit your `~/.bash_profile` or `~/.profile` or `~/.bashrc` (for Ubuntu) and add the following to the top:
-
-```bash
-export GITAWAREPROMPT=~/.bash/git-aware-prompt
-source "${GITAWAREPROMPT}/main.sh"
+curl -sL https://raw.githubusercontent.com/bri0/git-aware-prompt/master/install.sh | sh -
 ```
-
 
 ## Configuring
 
@@ -48,7 +37,7 @@ Once installed, there will be new `$git_branch` and `$git_dirty` variables
 available to use in the `PS1` environment variable, along with a number of
 color helper variables which you can see a list of in [colors.sh][].
 
-[colors.sh]: https://github.com/jimeh/git-aware-prompt/blob/master/colors.sh
+[colors.sh]: https://github.com/bri0/git-aware-prompt/blob/master/colors.sh
 
 If you want to know more about how to customize your prompt, I recommend
 this article: [How to: Change / Setup bash custom prompt (PS1)][how-to]
@@ -96,21 +85,11 @@ export PS1="\${debian_chroot:+(\$debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]
 export PS1="\[\033]0;$MSYSTEM:\w\007\033[32m\]\u@\h:\[\033[33m\w \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\033[0m\]\$ "
 ```
 
-## Updating
-
-Assuming you followed the default installation instructions and cloned this
-repo to `~/.bash/git-aware-prompt`:
-
-```bash
-cd ~/.bash/git-aware-prompt
-git pull
-```
-
 
 ## Usage Tips
 
 To view other user's tips, please check the
-[Usage Tips](https://github.com/jimeh/git-aware-prompt/wiki/Usage-Tips) wiki
+[Usage Tips](https://github.com/bri0/git-aware-prompt/wiki/Usage-Tips) wiki
 page. Or if you have tips of your own, feel free to add them :)
 
 
